@@ -1,158 +1,211 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tedy Fruit Store</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tedy Fruit Store — Buah Segar</title>
+  <meta name="description" content="Tedy Fruit Store - Toko buah segar lokal & impor. Produk berkualitas, pengiriman Samarinda." />
+  <link rel="icon" href="pict/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner" role="banner">
+      <div class="branding">
+        <div>
+          <h1 class="brand-title">Tedy Fruit Store</h1>
+          <p class="brand-sub">Buah segar lokal & impor — kualitas untuk keluarga</p>
+        </div>
+      </div>
 
-  <header>
-    <h1 align="center"><b>Tedy Fruit Store</b></h1>
-    <nav>
-      <table border="0" align="center" cellspacing="20">
-        <tr>
-          <td><a href="#beranda">Beranda</a></td>
-          <td><a href="#produk">Produk</a></td>
-          <td><a href="#tentang">Tentang Kami</a></td>
-          <td><a href="#kontak">Kontak</a></td>
-        </tr>
-      </table>
-    </nav>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#tentang">Tentang Kami</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="container" id="main">
     <!-- Beranda -->
-    <section id="beranda" align="center">
-      <h2>Selamat Datang di Tedy Fruit Store</h2>
-      <p>Toko buah segar terpercaya dengan pilihan buah lokal dan impor terbaik.</p>
+    <section id="beranda" aria-labelledby="beranda-heading">
+      <h2 id="beranda-heading">Selamat Datang di Tedy Fruit Store</h2>
+      <p class="lead">Toko buah segar terpercaya dengan pilihan buah lokal dan impor terbaik. Pengiriman Samarinda setiap hari.</p>
     </section>
 
     <!-- Produk -->
-    <section id="produk">
-      <h2 align="center">Daftar Buah</h2>
-      <table border="0" align="center" cellpadding="15">
-        <tr>
-          <td align="center">
-            <article>
-              <h3>Apel Hijau</h3>
-              <img src="pict/apel-hijau.jpg" alt="Apel Hijau" width="200"><br>
-              Rp 50.000 / kg <br>
-              <button>Beli</button>
-            </article>
-          </td>
-          <td align="center">
-            <article>
-              <h3>Apel Merah</h3>
-              <img src="pict/apel-merah.jpg" alt="Apel Merah" width="200"><br>
-              Rp 60.000 / kg <br>
-              <button>Beli</button>
-            </article>
-          </td>
-          <td align="center">
-            <article>
-              <h3>Jeruk</h3>
-              <img src="pict/jeruk.jpg" alt="Jeruk" width="200"><br>
-              Rp 34.000 / kg <br>
-              <button>Beli</button>
-            </article>
-          </td>
-        </tr>
-        <tr>
-          <td align="center">
-            <article>
-              <h3>Nanas</h3>
-              <img src="pict/nanas.jpg" alt="Nanas" width="160"><br>
-              Rp 29.000 / buah <br>
-              <button>Beli</button>
-            </article>
-          </td>
-          <td align="center">
-            <article>
-              <h3>Pepaya</h3>
-              <img src="pict/pepaya.jpg" alt="Pepaya" width="200"><br>
-              Rp 20.000 / buah <br>
-              <button>Beli</button>
-            </article>
-          </td>
-          <td align="center">
-            <article>
-              <h3>Pisang</h3>
-              <img src="pict/pisang.jpg" alt="Pisang" width="200"><br>
-              Rp 16.000 / sisir <br>
-              <button>Beli</button>
-            </article>
-          </td>
-        </tr>
-        <tr>
-          <td align="center">
-            <article>
-              <h3>Rambutan</h3>
-              <img src="pict/rambutan.jpg" alt="Rambutan" width="200"><br>
-              Rp 13.000 / kg <br>
-              <button>Beli</button>
-            </article>
-          </td>
-          <td align="center">
-            <article>
-              <h3>Salak</h3>
-              <img src="pict/salak.jpg" alt="Salak" width="200"><br>
-              Rp 25.000 / kg <br>
-              <button>Beli</button>
-            </article>
-          </td>
-          <td align="center">
-            <article>
-              <h3>Semangka</h3>
-              <img src="pict/semangka.jpg" alt="Semangka" width="200"><br>
-              Rp 18.000 / buah <br>
-              <button>Beli</button>
-            </article>
-          </td>
-        </tr>
-        <tr>
-          <td align="center" colspan="3">
-            <article>
-              <h3>Stroberi</h3>
-              <img src="pict/stoberi.jpg" alt="Stroberi" width="200"><br>
-              Rp 18.000 / pack <br>
-              <button>Beli</button>
-            </article>
-          </td>
-        </tr>
-      </table>
+    <section id="produk" aria-labelledby="produk-heading">
+      <div class="section-head">
+        <h2 id="produk-heading">Daftar Buah</h2>
+      </div>
+
+      <div class="products" role="list">
+        <!-- Apel Hijau -->
+        <article class="card product" role="listitem" aria-labelledby="apelh-title">
+          <h3 id="apelh-title">Apel Hijau</h3>
+          <img class="product-img" src="pict/apel-hijau.jpg" alt="Apel hijau" width="180" height="160">
+          <div class="price">Rp 50.000 <span class="unit">/ kg</span></div>
+          <div class="btn-group">
+            <button class="btn" type="button" aria-label="Beli Apel Hijau">Beli</button>
+            <button class="btn btn--ghost" type="button" aria-label="Detail Apel Hijau">Detail</button>
+          </div>
+        </article>
+
+        <!-- Apel Merah -->
+        <article class="card product" role="listitem" aria-labelledby="apelm-title">
+          <h3 id="apelm-title">Apel Merah</h3>
+          <img class="product-img" src="pict/apel-merah.jpg" alt="Apel merah" width="180" height="160">
+          <div class="price">Rp 60.000 <span class="unit">/ kg</span></div>
+          <div class="btn-group">
+            <button class="btn" type="button" aria-label="Beli Apel Merah">Beli</button>
+            <button class="btn btn--ghost" type="button" aria-label="Detail Apel Merah">Detail</button>
+          </div>
+        </article>
+
+        <!-- Jeruk -->
+        <article class="card product" role="listitem" aria-labelledby="jeruk-title">
+          <h3 id="jeruk-title">Jeruk</h3>
+          <img class="product-img" src="pict/jeruk.jpg" alt="Jeruk" width="180" height="160">
+          <div class="price">Rp 34.000 <span class="unit">/ kg</span></div>
+          <div class="btn-group">
+            <button class="btn" type="button" aria-label="Beli Jeruk">Beli</button>
+            <button class="btn btn--ghost" type="button" aria-label="Detail Jeruk">Detail</button>
+          </div>
+        </article>
+
+        <!-- Nanas -->
+        <article class="card product" role="listitem" aria-labelledby="nanas-title">
+          <h3 id="nanas-title">Nanas</h3>
+          <img class="product-img" src="pict/nanas.jpg" alt="Nanas" width="180" height="160">
+          <div class="price">Rp 29.000 <span class="unit">/ buah</span></div>
+          <div class="btn-group">
+            <button class="btn" type="button" aria-label="Beli Nanas">Beli</button>
+            <button class="btn btn--ghost" type="button" aria-label="Detail Nanas">Detail</button>
+          </div>
+        </article>
+
+        <!-- Pepaya -->
+        <article class="card product" role="listitem" aria-labelledby="pepaya-title">
+          <h3 id="pepaya-title">Pepaya</h3>
+          <img class="product-img" src="pict/pepaya.jpg" alt="Pepaya" width="180" height="160">
+          <div class="price">Rp 20.000 <span class="unit">/ buah</span></div>
+          <div class="btn-group">
+            <button class="btn" type="button" aria-label="Beli Pepaya">Beli</button>
+            <button class="btn btn--ghost" type="button" aria-label="Detail Pepaya">Detail</button>
+          </div>
+        </article>
+
+        <!-- Pisang -->
+        <article class="card product" role="listitem" aria-labelledby="pisang-title">
+          <h3 id="pisang-title">Pisang</h3>
+          <img class="product-img" src="pict/pisang.jpg" alt="Pisang" width="180" height="160">
+          <div class="price">Rp 16.000 <span class="unit">/ sisir</span></div>
+          <div class="btn-group">
+            <button class="btn" type="button" aria-label="Beli Pisang">Beli</button>
+            <button class="btn btn--ghost" type="button" aria-label="Detail Pisang">Detail</button>
+          </div>
+        </article>
+
+        <!-- Rambutan -->
+        <article class="card product" role="listitem" aria-labelledby="rambutan-title">
+          <h3 id="rambutan-title">Rambutan</h3>
+          <img class="product-img" src="pict/rambutan.jpg" alt="Rambutan" width="180" height="160">
+          <div class="price">Rp 13.000 <span class="unit">/ kg</span></div>
+          <div class="btn-group">
+            <button class="btn" type="button" aria-label="Beli Rambutan">Beli</button>
+            <button class="btn btn--ghost" type="button" aria-label="Detail Rambutan">Detail</button>
+          </div>
+        </article>
+
+        <!-- Salak -->
+        <article class="card product" role="listitem" aria-labelledby="salak-title">
+          <h3 id="salak-title">Salak</h3>
+          <img class="product-img" src="pict/salak.jpg" alt="Salak" width="180" height="160">
+          <div class="price">Rp 25.000 <span class="unit">/ kg</span></div>
+          <div class="btn-group">
+            <button class="btn" type="button" aria-label="Beli Salak">Beli</button>
+            <button class="btn btn--ghost" type="button" aria-label="Detail Salak">Detail</button>
+          </div>
+        </article>
+
+        <!-- Semangka -->
+        <article class="card product" role="listitem" aria-labelledby="semangka-title">
+          <h3 id="semangka-title">Semangka</h3>
+          <img class="product-img" src="pict/semangka.jpg" alt="Semangka" width="180" height="160">
+          <div class="price">Rp 18.000 <span class="unit">/ buah</span></div>
+          <div class="btn-group">
+            <button class="btn" type="button" aria-label="Beli Semangka">Beli</button>
+            <button class="btn btn--ghost" type="button" aria-label="Detail Semangka">Detail</button>
+          </div>
+        </article>
+
+        <!-- Stroberi -->
+        <article class="card product" role="listitem" aria-labelledby="stroberi-title">
+          <h3 id="stroberi-title">Stroberi</h3>
+          <img class="product-img" src="pict/stoberi.jpg" alt="Stroberi" width="180" height="160">
+          <div class="price">Rp 18.000 <span class="unit">/ pack</span></div>
+          <div class="btn-group">
+            <button class="btn" type="button" aria-label="Beli Stroberi">Beli</button>
+            <button class="btn btn--ghost" type="button" aria-label="Detail Stroberi">Detail</button>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- Tentang Kami -->
-    <section id="tentang" align="center">
-      <h2>Tentang Kami</h2>
-      <p>
-        Tedy Fruit Store berdiri sejak 2025 dan menyediakan buah-buahan segar langsung dari petani lokal maupun impor berkualitas. 
-        <br>Kami berkomitmen menghadirkan produk sehat dengan harga terbaik untuk keluarga Anda.
-      </p>
+    <section id="tentang" aria-labelledby="tentang-heading">
+      <div class="section-card">
+        <h2 id="tentang-heading">Tentang Kami</h2>
+        <p class="lead">Tedy Fruit Store berdiri sejak 2025 dan menyediakan buah-buahan segar langsung dari petani lokal maupun impor berkualitas. Kami berkomitmen menghadirkan produk sehat dengan harga terbaik untuk keluarga Anda. Pengiriman lokal setiap hari kerja.</p>
+      </div>
     </section>
 
     <!-- Kontak -->
-    <section id="kontak" align="center">
-      <h2>Kontak</h2>
-      <p>Email: tedyfruitstore@gmail.com</p>
-      <p>Telepon: +62 822-1585-4701</p>
-      <p>Alamat: Jl. Juanda, Samarinda</p>
+    <section id="kontak" aria-labelledby="kontak-heading">
+      <div class="section-card">
+        <h2 id="kontak-heading">Kontak</h2>
+
+        <div class="contact-list">
+          <p>Email: <a href="mailto:tedyfruitstore@gmail.com">tedyfruitstore@gmail.com</a></p>
+          <p>Telepon: <a href="tel:+6282215854701">+62 822-1585-4701</a></p>
+          <p>Alamat: Jl. Juanda, Samarinda</p>
+        </div>
+
+        <form class="contact-form" action="#" method="post" aria-label="Form kontak">
+          <div>
+            <label for="name">Nama</label>
+            <input id="name" name="name" type="text" placeholder="Nama lengkap" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="email@domain.com" required />
+          </div>
+          <div>
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tinggalkan pesan untuk kami..."></textarea>
+          </div>
+          <div class="contact-actions">
+            <button class="btn" type="submit" aria-label="Kirim Pesan">Kirim</button>
+            <button class="btn btn--ghost" type="reset" aria-label="Reset Form">Reset</button>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer align="center">
-    <p>
-      Referensi: 
-      <a href="https://www.sayurbox.com/category/fruits-1-cdd2074a" target="_blank">Sayurbox</a>
-    </p>
-    <p>
-      <a href="https://www.instagram.com/tedyyca" target="_blank">
-        <img src="pict/ig.png" alt="Instagram" width="30">
-      </a>
-    </p>
-    <p>&copy; 2025 Tedy Fruit Store.</p>
+  <footer role="contentinfo">
+    <div class="container">
+      <p>Referensi: <a href="https://www.sayurbox.com/category/fruits-1-cdd2074a" target="_blank" rel="noopener">Sayurbox</a></p>
+      <p>
+        <a href="https://www.instagram.com/tedyyca" target="_blank" rel="noopener">
+          <!-- <img src="pict/ig.png" alt="Instagram Tedy Fruit Store" width="30" height="30"> -->
+        </a>
+      </p>
+      <p>&copy; 2025 Tedy Fruit Store.</p>
+    </div>
   </footer>
-
 </body>
 </html>
